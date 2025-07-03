@@ -688,6 +688,10 @@ h1, h2 {
 
 const buyitems = {
 
+  "Kits": [
+    { name: "Player Kit", price: 15000 }
+  ],
+
 "Weapons": {
 
 "Guns": {
@@ -700,6 +704,14 @@ const buyitems = {
 
 { name: "KAM", price: 8500 },
 
+{ name: "KA101", price: 6500 },
+
+{ name: "KAS74U", price: 5000 },
+
+{ name: "VSS", price: 5000 },
+
+{ name: "Bizon", price: 2500 },
+
 { name: "Vaiga", price: 5500 }
 
 ],
@@ -708,9 +720,11 @@ const buyitems = {
 
 { name: "LAR", price: 5500 },
 
-{ name: "DMR", price: 0 },
+{ name: "DMR", price: 8500 },
 
 { name: "M70 Tundra", price: 6500 },
+
+{ name: "Savanna", price: 6500 },
 
 { name: "VS89", price: 8500 },
 
@@ -720,11 +734,27 @@ const buyitems = {
 
 ],
 
-"Melee": [
+"Melee & Pistols": [
+
+{ name: "MKII", price: 500 },
+
+{ name: "Revolver", price: 500 },
+
+{ name: "FX45", price: 500 },
+
+{ name: "Deagle", price: 500 },
+
+{ name: "CR75", price: 500 },
 
 { name: "Combat Knife", price: 500 },
 
 { name: "Hunter Knife", price: 500 }
+
+],
+
+"Special": [
+
+{ name: "M79", price: 10000 }
 
 ]
 
@@ -764,21 +794,37 @@ const buyitems = {
 
 "Short Range": [
 
-{ name: "Red Dot (Baraka)", price: 100 },
+{ name: "Red Dot", price: 100 },
 
-{ name: "PSO-1 Scope", price: 400 }
+{ name: "Backup Ironsight", price: 200 },
+
+{ name: "Combat Sight", price: 200 },
+
+{ name: "Mini Sight", price: 200 },
+
+{ name: "Kobra Sight", price: 200 },
+
+{ name: "ATOG 4x", price: 200 },
+
+{ name: "P187 Scope", price: 600 }
 
 ],
 
 "Long Range": [
 
-{ name: "ATOG 4x", price: 3200 },
-
 { name: "ATOG 6x", price: 400 },
 
 { name: "PU Scope", price: 200 },
 
-{ name: "Hunter Scope", price: 450 }
+{ name: "PSO-1 Scope", price: 400 },
+
+{ name: "PSO-1-1 Scope", price: 400 },
+
+{ name: "PSO-6 Scope", price: 800 },
+
+{ name: "Hunter Scope", price: 450 },
+
+{ name: "Marksman Scope", price: 1000 }
 
 ],
 
@@ -796,29 +842,39 @@ const buyitems = {
 
 "Auto Mags": [
 
-{ name: "40 Round C-Mag", price: 1200 },
+{ name: "40 Rnd C-Mag", price: 1200 },
 
-{ name: "60 Round C-Mag", price: 1500 },
+{ name: "60 Rnd C-Mag", price: 1500 },
 
-{ name: "30 Round KAM Poly Mag", price: 500 },
+{ name: "30 Rnd KAM Poly Mag", price: 500 },
 
-{ name: "75 Round KAM Drum Mag", price: 1500 },
+{ name: "75 Rnd KAM Mag", price: 1500 },
 
-{ name: "20 Round Vaiga Drum Mag", price: 500 },
+{ name: "20 Rnd Vaiga Mag", price: 500 },
 
-{ name: "30 Round AUR Mag", price: 350 }
+{ name: "20 Rnd DMR Mag", price: 1000 },
+
+{ name: "45 Rnd 74U Mag", price: 1000 },
+
+{ name: "20 Rnd VSS Mag", price: 500 },
+
+{ name: "64 Rnd Bizon Mag", price: 250 },
+
+{ name: "30 Rnd AUR Mag", price: 350 }
 
 ],
 
 "Sniper Mags": [
 
-{ name: "20 Round DMR Mag", price: 0 },
+{ name: "20 Rnd DMR Mag", price: 1000 },
 
-{ name: "20 Round LAR Mag", price: 600 },
+{ name: "20 Rnd LAR Mag", price: 600 },
 
-{ name: "10 Round VSD Mag", price: 500 },
+{ name: "10 Rnd VSD Mag", price: 500 },
 
-{ name: "10 Round VS89 Mag", price: 500 }
+{ name: "10 Rnd Savanna Mag", price: 500 },
+
+{ name: "10 Rnd VS89 Mag", price: 500 }
 
 ]
 
@@ -826,9 +882,13 @@ const buyitems = {
 
 "Ammo": [
 
-{ name: ".357", price: 50, bulkOptions: [1, 5, 10] },
+{ name: ".357", price: 500, bulkOptions: [1, 5, 10] },
 
-{ name: "9x39 AP", price: 100, bulkOptions: [1, 5, 10] },
+{ name: ".380ACP", price: 500, bulkOptions: [1, 5, 10] },
+
+{ name: ".22 LR", price: 500, bulkOptions: [1, 5, 10] },
+
+{ name: "9x39mm", price: 100, bulkOptions: [1, 5, 10] },
 
 { name: "9x19mm", price: 50, bulkOptions: [1, 5, 10] },
 
@@ -844,7 +904,11 @@ const buyitems = {
 
 { name: ".45ACP", price: 500, bulkOptions: [1, 5, 10] },
 
-{ name: "12GA Buck", price: 850, bulkOptions: [1, 5, 10] }
+{ name: "12GA Buck", price: 850, bulkOptions: [1, 5, 10] },
+
+{ name: "12GA Rubber", price: 550, bulkOptions: [1, 5, 10] },
+
+{ name: "12GA Rifled", price: 850, bulkOptions: [1, 5, 10] }
 
 ]
 
@@ -880,7 +944,13 @@ const buyitems = {
 
 { name: "CUU Jacket", price: 300 },
 
-{ name: "Hunter Jacket", price: 500 }
+{ name: "Hunter Jacket", price: 500 },
+
+{ name: "Down Jacket", price: 400 },
+
+{ name: "OMK Jacket", price: 300 },
+
+{ name: "Tactical Shirt", price: 300 }
 
 ],
 
@@ -890,25 +960,29 @@ const buyitems = {
 
 { name: "Hunter Backpack", price: 400 },
 
+{ name: "Tactical Backpack", price: 400 },
+
 { name: "Skull Backpack", price: 500 },
 
 { name: "Combat Backpack", price: 400 },
 
 { name: "Black Drypack", price: 400 },
 
-{ name: "Assault Bag", price: 200 },
-
-{ name: "Army Pouch", price: 0 }
+{ name: "Assault Bag", price: 200 }
 
 ],
 
-"Plate Carriers": [
+"Vests": [
 
 { name: "Plate Carrier", price: 1800 },
 
 { name: "Pouches", price: 200 },
 
-{ name: "Holster", price: 50 }
+{ name: "Holster", price: 50 },
+
+{ name: "Field Vest", price: 1800 },
+
+{ name: "Assault + Pack", price: 250 }
 
 ],
 
@@ -922,7 +996,9 @@ const buyitems = {
 
 { name: "CUU Pants", price: 300 },
 
-{ name: "Hunter Pants", price: 500 }
+{ name: "Hunter Pants", price: 500 },
+
+{ name: "OMK Pants", price: 300 }
 
 ],
 
@@ -940,11 +1016,9 @@ const buyitems = {
 
 "Boots": [
 
-{ name: "Black Assault Boots", price: 300 },
+{ name: "Assault Boots", price: 300 },
 
-{ name: "Tan Jungle Boots", price: 200 },
-
-{ name: "Green Jungle Boots", price: 200 },
+{ name: "Jungle Boots", price: 200 },
 
 { name: "Hunter Boots", price: 200 }
 
@@ -962,31 +1036,17 @@ const buyitems = {
 
 "Face": [
 
-{ name: "Green Bandana", price: 250 },
+{ name: "All Ski Masks", price: 200 },
 
-{ name: "Black Bandana", price: 250 },
+{ name: "Mime Mask", price: 250 },
 
-{ name: "Camo Bandana", price: 250 },
-
-{ name: "Green Ski Mask", price: 200 },
-
-{ name: "Black Ski Mask", price: 200 },
-
-{ name: "Skull Ski Mask", price: 200 },
-
-{ name: "Mime Mask", price: 250 }
+{ name: "Carnival Mask", price: 100 }
 
 ]
 
 },
 
-"Meds & Tools": {
-
-"Pharmaceuticals": [
-
-{ name: "NBC Filters", price: 100, bulkOptions: [1, 2, 5] },
-
-{ name: "NBC Masks", price: 300, bulkOptions: [1, 2, 5] },
+"Meds": [
 
 { name: "Bandages (2-pack)", price: 50 },
 
@@ -1011,6 +1071,24 @@ const buyitems = {
 { name: "IV Start Kit", price: 50 },
 
 { name: "Chlorine Tablets", price: 100 }
+
+],
+
+"NBC Gear": [
+
+{ name: "NBC Filters", price: 100, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Masks", price: 300, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Hood", price: 1000, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Jacket", price: 1000, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Pants", price: 1000, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Boots", price: 1000, bulkOptions: [1, 2, 5] },
+
+{ name: "NBC Gloves", price: 1000, bulkOptions: [1, 2, 5] }
 
 ],
 
@@ -1052,9 +1130,7 @@ const buyitems = {
 
 { name: "Compass", price: 200 }
 
-]
-
-},
+],
 
 "Explosives": {
 
@@ -1074,9 +1150,13 @@ const buyitems = {
 
 { name: "Flashbangs", price: 50, bulkOptions: [1, 2, 5] },
 
+{ name: "Smoke Nades", price: 200, bulkOptions: [1, 2, 5] },
+
 { name: "Land Mines", price: 2000, bulkOptions: [1, 5, 10] },
 
 { name: "40MM Pox Grenade", price: 6000, bulkOptions: [1, 5, 10] },
+
+{ name: "40MM Smoke", price: 200, bulkOptions: [1, 5, 10] },
 
 { name: "Claymores", price: 500 }
 
@@ -1092,9 +1172,11 @@ const buyitems = {
 
 { name: "Medium Tent", price: 1500 },
 
+{ name: "Canopy Tent", price: 1200 },
+
 { name: "Sea Chest", price: 1000 },
 
-{ name: "Barrel", price: 0, bulkOptions: [1, 2, 5] },
+{ name: "Barrel", price: 1200, bulkOptions: [1, 2, 5] },
 
 { name: "Ammo Box", price: 50, bulkOptions: [1, 2, 5] }
 
@@ -1107,6 +1189,8 @@ const buyitems = {
 { name: "Sharpening Stones", price: 500, bulkOptions: [1, 5, 10, 20] },
 
 { name: "4Dial Combo Lock", price: 3500, bulkOptions: [1, 5, 10] },
+
+{ name: "Hammer", price: 300 },
 
 { name: "Hatchet", price: 500 },
 
@@ -1179,40 +1263,50 @@ const buyitems = {
 };
 
 // --- SELL ITEMS ---
-const sellitems = [
-  { name: "Syringe", price: 100, bulkOptions: [1, 5, 10] },
-  { name: "Pens", price: 100, bulkOptions: [1, 5, 10] },
-  { name: "Cigarettes", price: 100, bulkOptions: [1, 10, 50] },
-  { name: "Books", price: 100, bulkOptions: [1, 5, 20] },
-  { name: "Filled Blood Bag", price: 100, bulkOptions: [1, 5, 20] },
-  { name: "Cassette Tape", price: 100, bulkOptions: [1, 5, 20] },
-  { name: "Radio", price: 500, bulkOptions: [1, 5, 20] },
-  { name: "Spray Paint", price: 500, bulkOptions: [1, 5, 20] },
-  { name: "Oil", price: 1500, bulkOptions: [1, 5, 20] },
-  { name: "Brake Fluid", price: 500, bulkOptions: [1, 5, 20] },
-  { name: "Cocaine", price: 500, bulkOptions: [1, 5, 20] },
-  { name: "Mess Tin", price: 500, bulkOptions: [1, 5, 20] },
-  { name: "Bible", price: 10000 },
-  { name: "Golden Deagle", price: 2500 },
-  { name: "Engraved 1911", price: 500 },
-  { name: "Pink Derringer", price: 3000 },
-  { name: "Faction Flag", price: 0 },
-  { name: "Set of 4 Teddy Bears", price: 500, bulkOptions: [1] },
-  { name: "Set of 4 Sneakers", price: 2500, bulkOptions: [1] },
-  { name: "Cannabis", price: 200, bulkOptions: [1, 10, 50] },
-  { name: "Tanned Leather (8/8)", price: 1000, bulkOptions: [1, 8] }
-];
+const sellitems = {
+  Sets: [
+    { name: "Teddy Bears (4/4)", price: 500, bulkOptions: [1] },
+    { name: "Payday Masks (4/4)", price: 2500, bulkOptions: [1] },
+    { name: "Sneakers (5/5)", price: 1000, bulkOptions: [1] }
+  ],
+  Pelts: {
+    Wild: [
+      { name: "Deer Pelt", price: 500, bulkOptions: [1, 5, 10] },
+      { name: "Boar Pelt", price: 500, bulkOptions: [1, 5, 10] },
+      { name: "Wolf Pelt", price: 600, bulkOptions: [1, 5, 10] },
+      { name: "Bear Pelt", price: 1000, bulkOptions: [1, 5, 10] }
+    ],
+    Domestic: [
+      { name: "Goat Pelt", price: 100, bulkOptions: [1, 5, 10] },
+      { name: "Cow Pelt", price: 100, bulkOptions: [1, 5, 10] },
+      { name: "Sheep Pelt", price: 100, bulkOptions: [1, 5, 10] }
+    ],
+    Processed: [
+      { name: "Tanned Leather (8/8)", price: 1000, bulkOptions: [1, 5] }
+    ]
+  },
+  Other: [
+    { name: "Syringe", price: 100, bulkOptions: [1, 5, 10] },
+    { name: "Pens", price: 100, bulkOptions: [1, 5, 10] },
+    { name: "Cigarettes", price: 100, bulkOptions: [1, 10, 50] },
+    { name: "Books", price: 100, bulkOptions: [1, 5, 20] },
+    { name: "Filled Blood Bag", price: 100, bulkOptions: [1, 5, 20] },
+    { name: "Cassette Tape", price: 100, bulkOptions: [1, 5, 20] },
+    { name: "Radio", price: 500, bulkOptions: [1, 5, 20] },
+    { name: "Spray Paint", price: 500, bulkOptions: [1, 5, 20] },
+    { name: "Oil", price: 1500, bulkOptions: [1, 5, 20] },
+    { name: "Brake Fluid", price: 500, bulkOptions: [1, 5, 20] },
+    { name: "Cocaine", price: 500, bulkOptions: [1, 5, 20] },
+    { name: "Mess Tin", price: 500, bulkOptions: [1, 5, 20] },
+    { name: "Bible", price: 10000 },
+    { name: "Golden Deagle", price: 2500 },
+    { name: "Engraved 1911", price: 500 },
+    { name: "Pink Derringer", price: 3000 },
+    { name: "Faction Flag", price: 15000 },
+    { name: "Cannabis", price: 200, bulkOptions: [1, 10, 50] }
+  ]
+};
 
-// --- PELTS ---
-const pelts = [
-  { name: "Deer Pelt", price: 500, bulkOptions: [1, 5, 10] },
-  { name: "Boar Pelt", price: 500, bulkOptions: [1, 5, 10] },
-  { name: "Wolf Pelt", price: 600, bulkOptions: [1, 5, 10] },
-  { name: "Bear Pelt", price: 1000, bulkOptions: [1, 5, 10] },
-  { name: "Goat Pelt", price: 100, bulkOptions: [1, 5, 10] },
-  { name: "Cow Pelt", price: 100, bulkOptions: [1, 5, 10] },
-  { name: "Sheep Pelt", price: 100, bulkOptions: [1, 5, 10] }
-];
 
 const roles = {
   "Operation Smoke Stack": {
@@ -1230,8 +1324,7 @@ const roles = {
   "Signal Junkie": {
     description: "Turn in 25 radios & 25 cassettes → 25% off electronics at trader",
     discounts: {
-      "Radio": 25,
-      "Cassette Tape": 25
+      "NV Googles": 25
     }
   },
   "Krush Cartel": {
@@ -1249,17 +1342,16 @@ const roles = {
   "Desert Demon": {
     description: "Kill with Gold Deagle → 50% off pistols & ammo",
     discounts: {
-      "Golden Deagle": 50,
+      "Deagle": 50,
       ".357": 50,
-      "9x39 AP": 50,
       "9x19mm": 50,
-      "5.56x45": 50,
-      ".308 WIN": 50,
-      "545x39": 50,
-      "7.62x39": 50,
-      "7.62x54mmR": 50,
       ".45ACP": 50,
-      "12GA Buck": 50
+      "MKII": 50, 
+      "Revolver": 50,
+      "FX45": 50,
+      "CR75": 50,
+      ".380ACP": 50,
+      ".22 LR": 50
     }
   },
   "Book of ProfitZ": {
@@ -1272,7 +1364,7 @@ const roles = {
   "Pit Boss": {
     description: "Turn in 25 deer steaks, 15 boar & 15 bear steaks (cooked, not rotten) → ₵10,000 + 10% off food & drinks",
     bonuses: {
-      "Food Bonus": 10000 // placeholder for the lump sum bonus, you can handle this separately in code
+      "Food Bonus": 10000 // placeholder for the lump sum bonus
     },
     discounts: {
       "Canned Bacon": 10
@@ -1299,13 +1391,13 @@ const roles = {
   "Bear Broker": {
     description: "Turn in 5 sets of teddy bears (4 colors per set) → ₵2,500 per set",
     bonuses: {
-      "Set of 4 Teddy Bears": 2500
+      "Teddy Bears (4/4)": 2500
     }
   },
   "Sneaker Head": {
-    description: "Turn in all 5 Converse sneaker colors → Earn ₵2,500 per set",
+    description: "Turn in all 5 sets of sneaker colors → Earn ₵2,500 per set",
     bonuses: {
-      "Set of 4 Sneakers": 2500
+      "Sneakers (5/5)": 2500
     }
   },
   "Master Baiter": {
@@ -1347,7 +1439,9 @@ const roles = {
     description: "Get 100 headshots. All ammo and mags are 50% off.",
     discounts: {
       ".357": 50,
-      "9x39 AP": 50,
+      ".380ACP": 50,
+      ".22 LR": 50,
+      "9x39mm": 50,
       "9x19mm": 50,
       "5.56x45": 50,
       ".308 WIN": 50,
@@ -1356,23 +1450,27 @@ const roles = {
       "7.62x54mmR": 50,
       ".45ACP": 50,
       "12GA Buck": 50,
-      "40 Round C-Mag": 50,
+      "12GA Rubber": 50,
+      "12GA Rifled": 50,
+      "40 Rnd C-Mag": 50,
       "60 Round C-Mag": 50,
-      "30 Round KAM Poly Mag": 50,
-      "75 Round KAM Drum Mag": 50,
-      "20 Round Vaiga Drum Mag": 50,
-      "30 Round AUR Mag": 50,
-      "20 Round DMR Mag": 50,
-      "20 Round LAR Mag": 50,
-      "10 Round VSD Mag": 50,
-      "10 Round VS89 Mag": 50
+      "30 Rnd KAM Poly Mag": 50,
+      "75 Rnd KAM Mag": 50,
+      "20 Rnd Vaiga Mag": 50,
+      "30 Rnd AUR Mag": 50,
+      "45 Rnd 74U Mag": 50,
+      "20 Rnd VSS Mag": 50,
+      "64 Rnd Bizon Mag": 50,
+      "20 Rnd DMR Mag": 50,
+      "20 Rnd LAR Mag": 50,
+      "10 Rnd VSD Mag": 50,
+      "10 Rnd Savanna Mag": 50,
+      "10 Rnd VS89 Mag": 50
     }
   },
   "Scope Fiend": {
     description: "Land 10 sniper kills from over 500 yards. Get 50% off sniper ammo.",
     discounts: {
-      "10 Round VSD Mag": 50,
-      "10 Round VS89 Mag": 50,
       "7.62x54mmR": 50,
       ".308 WIN": 50
     }
@@ -1383,6 +1481,7 @@ const roles = {
       "LAR": 25,
       "DMR": 25,
       "M70 Tundra": 25,
+      "Savanna": 25,
       "VS89": 25,
       "VSD": 25,
       "Mosin": 25
@@ -1405,11 +1504,10 @@ const roles = {
       "Chlorine Tablets": 10
     }
   },
-  "Bolt God": {
-    description: "Kill a fully kitted player with a crossbow. All crossbows and bolts are 50% off after proof is provided.",
-    discounts: {
-      "Crossbow": 50,
-      "Crossbow Bolts": 50  // Adjust keys to your item names
+  "Boom Daddy": {
+    description: "turn in 50 complete IEDS.",
+    bonuses: {
+     "IEDS": 100000
     }
   },
   "First Bloodz": {
@@ -1417,6 +1515,12 @@ const roles = {
     discounts: {
       // Apply 25% off all items (handle separately in your code),
       // or list popular items here for discount
+    }
+  },
+  "Time Served": {
+    description: " — receive 20% off at trader.",
+    discounts: {
+      // Apply 20% off all items (handle separately in your code),
     }
   },
   "First Responders": {
@@ -1463,7 +1567,8 @@ const roles = {
 const roleBonuses = {
   "Master Baiter": 15000,
   "Pit Boss": 10000,
-  "Cap Collector": 3500
+  "Cap Collector": 3500,
+  "Boom Daddy": 100000,
 };
 
 const itemsWithRoleTurnIn = new Set([
@@ -1483,8 +1588,8 @@ const itemsWithRoleTurnIn = new Set([
   "Goat Pelt",
   "Cow Pelt",
   "Sheep Pelt",
-  "Set of 4 Teddy Bears",
-  "Set of 4 Sneakers",
+  "Teddy Bears (4/4)",
+  "Sneakers (5/5)",
   "Mackerel",    
   "Carp",        
   "Pollock",     
@@ -1509,7 +1614,7 @@ const tablinks = document.getElementsByClassName("tablinks");
 let buyNavigationStack = [buyitems];
 let sellNavigationStack = [sellitems];
 populateBuyButtons(buyitems, buyItemButtonsDiv, true);
-populateSellButtons();
+populateSellButtons(sellitems);
 populateRoles();
 attachEventListeners();
 // Handle closing of modal
@@ -1557,34 +1662,34 @@ if (!isTopCategory) addReturnButton(container, "buy");
 }
 
 function addReturnButton(container, type) {
-let returnButton = document.createElement("button");
-returnButton.textContent = "←";
-returnButton.className = "return-button";
-returnButton.onclick = () => {
-if (type === "buy") {
-if (buyNavigationStack.length > 1) {
-buyNavigationStack.pop(); 
-const previousCategory = buyNavigationStack[buyNavigationStack.length - 1];
-populateBuyButtons(previousCategory, container, buyNavigationStack.length === 1);
-} else {
-
-populateBuyButtons(buyitems, container, true); // Return to top level if stack is empty
-}
-
-} else if (type === "sell") {
-if (sellNavigationStack.length > 1) {
-sellNavigationStack.pop(); // Remove the current level from the stack
-populateSellButtons(); // Return to sell items list
-} else {
-
-populateSellButtons(); // Return to top level if stack is empty
-}
-
-}
-
-};
-
-container.appendChild(returnButton);
+  let returnButton = document.createElement("button");
+  returnButton.textContent = "←";
+  returnButton.className = "return-button";
+  returnButton.onclick = () => {
+    if (type === "sell") {
+      if (sellNavigationStack.length > 1) {
+        // Pop current category
+        sellNavigationStack.pop();
+        // Get previous category from stack
+        const previousCategory = sellNavigationStack[sellNavigationStack.length - 1];
+        // Repopulate buttons with previous category
+        populateSellButtons(previousCategory);
+      } else {
+        // At root, reset to root sellitems
+        sellNavigationStack = [sellitems];
+        populateSellButtons(sellitems);
+      }
+    } else if (type === "buy") {
+      if (buyNavigationStack.length > 1) {
+        buyNavigationStack.pop();
+        const previousCategory = buyNavigationStack[buyNavigationStack.length - 1];
+        populateBuyButtons(previousCategory, container, buyNavigationStack.length === 1);
+      } else {
+        populateBuyButtons(buyitems, container, true);
+      }
+    }
+  };
+  container.appendChild(returnButton);
 }
 
 function populateBulkOptions(container, item, summaryDiv, type) {
@@ -1608,7 +1713,7 @@ function populateBulkOptions(container, item, summaryDiv, type) {
     });
   }
 
-  addReturnButton(container, type); // Return button always at bottom
+  addReturnButton(container, type); 
 }
 
 function handleBuyItemClick(item) {
@@ -1716,12 +1821,12 @@ function handleRoleTurnIn(item, summaryDiv) {
       addItemToSummary(item.name, 150, 1000, summaryDiv);
       break;
 
-    case "Set of 4 Teddy Bears":
+    case "Teddy Bears (4/4)":
       // Bear Broker: Turn in 5 sets of teddy bears (4 colors per set)
-      addItemToSummary(item.name, 5, 2500, summaryDiv);
+      addItemToSummary(item.name, 5, 500, summaryDiv);
       break;
 
-    case "Set of 4 Sneakers":
+    case "Sneakers (5/5)":
       // Sneaker Head: Turn in all 5 Converse sneaker colors
       addItemToSummary(item.name, 4, item.price, summaryDiv);
       break;
@@ -1823,45 +1928,63 @@ updateSummaries();
 }
 
 }
+function populateSellButtons(category = sellitems) {
+  const container = document.getElementById("itemButtons");
+  clearItemButtons(container);
 
-function populateSellButtons() {
-  const itemButtonsDiv = document.getElementById("itemButtons");
-  clearItemButtons(itemButtonsDiv);
+  Object.entries(category).forEach(([label, value]) => {
+    createButton(container, label, () => {
+      if (Array.isArray(value)) {
+        // Push the leaf array category onto the navigation stack
+        sellNavigationStack.push(value);
 
-  sellitems.forEach(item => {
-    if (item.name === "Set of 4 Sneakers") {
-      createButton(itemButtonsDiv, item.name, () => {
-        const hasSneakerHeadRole = document.querySelector('.role-btn[data-role="Sneaker Head"]')?.classList.contains("active");
-        if (!hasSneakerHeadRole) {
-          alert("You must have the Sneaker Head role to sell individual sets.");
+        // Show sellable items
+        clearItemButtons(container);
+        value.forEach(item => {
+          let handler = () => handleSellItemClick(item);
+
+          // Alerts for special items
+          if (item.name === "Sneakers (5/5)") {
+            handler = () => {
+              alert("Add a backpack of choice.");
+              handleSellItemClick(item);
+            };
+          } else if (item.name === "Teddy Bears (4/4)") {
+            handler = () => {
+              alert("Add a box of nails or suppressor of your choice!");
+              handleSellItemClick(item);
+            };
+          } else if (item.name === "Payday Masks (4/4)") {
+            handler = () => {
+              alert("Add a plate carrier of choice.");
+              handleSellItemClick(item);
+            };
+          } else if (item.name === "Cannabis") {
+            handler = () => {
+              alert("Each x1 Cannabis represents 1 full crate (50 slots).");
+              handleSellItemClick(item);
+            };
+          }
+
+          createButton(container, item.name, handler);
+        });
+
+        // Add return button anytime deeper than top level
+        if (sellNavigationStack.length > 1) {
+          addReturnButton(container, "sell");
         }
-        // Show options regardless of role status
-        handleSellItemClick(item);
-      });
-     } else if (item.name === "Set of 4 Teddy Bears") {
-    createButton(itemButtonsDiv, item.name, () => {
-      alert("Add a box of nails or suppressor of your choice!");
-      handleSellItemClick(item); // allow proceeding anyway
+      } else {
+        // Navigating deeper into an object category
+        sellNavigationStack.push(value);
+        populateSellButtons(value);
+      }
     });
-  } else if (item.name === "Cannabis") {
-    createButton(itemButtonsDiv, item.name, () => {
-      alert("Each x1 Cannabis represents 1 full crate (50 slots).");
-      handleSellItemClick(item); // still proceeds
-    });
-    } else {
-      createButton(itemButtonsDiv, item.name, () => handleSellItemClick(item));
-    }
   });
 
-  createButton(itemButtonsDiv, "Pelts", () => {
-    clearItemButtons(itemButtonsDiv);
-    pelts.forEach(pelt => {
-      createButton(itemButtonsDiv, pelt.name, () => handleSellItemClick(pelt));
-    });
-    addReturnButton(itemButtonsDiv, "sell");
-  });
-
-  addReturnButton(itemButtonsDiv, "sell");
+  // Add return button if at top level and stack length > 1 (unlikely)
+  if (sellNavigationStack.length > 1) {
+    addReturnButton(container, "sell");
+  }
 }
 
 function populateRoles() {
@@ -1978,26 +2101,29 @@ function calculateAndShowTotals() {
     sellDetails += `${name} x ${qty} = ₵${totalPrice.toLocaleString()}\n`;
   });
 
-  // Role discounts
-  const hasRole = (role) =>
-    document.querySelector(`.role-btn[data-role="${role}"]`)?.classList.contains("active");
+// Role discounts
+const hasRole = (role) =>
+  document.querySelector(`.role-btn[data-role="${role}"]`)?.classList.contains("active");
 
-  let discount = 1.0;
-  let discountLabel = "";
+let discount = 1.0;
+let discountLabel = "";
 
-  if (hasRole("First Bloodz")) {
-    discount = 0.75;
-    discountLabel = " (First Bloodz 25% Off)";
-  } else if (
-    hasRole("Veterans") ||
-    hasRole("First Responders") ||
-    hasRole("Health Providers")
-  ) {
-    discount = 0.90;
-    if (hasRole("Veterans")) discountLabel = " (Veterans 10% Off)";
-    if (hasRole("First Responders")) discountLabel = " (First Responders 10% Off)";
-    if (hasRole("Health Providers")) discountLabel = " (Health Providers 10% Off)";
-  }
+if (hasRole("First Bloodz")) {
+  discount = 0.75;
+  discountLabel = " (First Bloodz 25% Off)";
+} else if (hasRole("Time Served")) {
+  discount = 0.80;
+  discountLabel = " (Time Served 20% Off)";
+} else if (
+  hasRole("Veterans") ||
+  hasRole("First Responders") ||
+  hasRole("Health Providers")
+) {
+  discount = 0.90;
+  if (hasRole("Veterans")) discountLabel = " (Veterans 10% Off)";
+  if (hasRole("First Responders")) discountLabel = " (First Responders 10% Off)";
+  if (hasRole("Health Providers")) discountLabel = " (Health Providers 10% Off)";
+}
 
   let discountedBuy = totalBuy * discount;
 
@@ -2007,7 +2133,8 @@ function calculateAndShowTotals() {
     "Cap Collector": 3500,
     "Pit Boss": 10000,
     "Bear Broker": 2500,
-    "Sneaker Head": 2500
+    "Sneaker Head": 2500,
+    "Boom Daddy": 100000,
     // Add more if needed
   };
 
