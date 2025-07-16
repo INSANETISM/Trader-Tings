@@ -784,7 +784,9 @@ const buyitems = {
 
 { name: "M4 Polymer Handguard", price: 50 },
 
-{ name: "M4 MP Handguard", price: 50 }
+{ name: "M4 MP Handguard", price: 50 },
+
+{ name: "Universal Flashlight", price: 500 }
 
 ]
 
@@ -875,6 +877,18 @@ const buyitems = {
 { name: "10 Rnd Savanna Mag", price: 500 },
 
 { name: "10 Rnd VS89 Mag", price: 500 }
+
+],
+
+"Pistol Mags": [
+
+{ name: "MKII Mag", price: 50 },
+
+{ name: "CR75 Mag", price: 50 },
+
+{ name: "FX45 Mag", price: 100 },
+
+{ name: "Deagle Mag", price: 100 }
 
 ]
 
@@ -1038,7 +1052,7 @@ const buyitems = {
 
 { name: "All Ski Masks", price: 200 },
 
-{ name: "Mime Mask", price: 250 },
+{ name: "Mime Mask", price: 100 },
 
 { name: "Carnival Mask", price: 100 }
 
@@ -1086,13 +1100,15 @@ const buyitems = {
 
 { name: "NBC Pants", price: 1000, bulkOptions: [1, 2, 5] },
 
-{ name: "NBC Boots", price: 1000, bulkOptions: [1, 2, 5] },
+{ name: "NBC Boots", price: 500, bulkOptions: [1, 2, 5] },
 
-{ name: "NBC Gloves", price: 1000, bulkOptions: [1, 2, 5] }
+{ name: "NBC Gloves", price: 500, bulkOptions: [1, 2, 5] }
 
 ],
 
 "Miscellaneous": [
+
+{ name: "Punchcard", price: 50000 },
 
 { name: "Canteen", price: 100 },
 
@@ -1184,11 +1200,13 @@ const buyitems = {
 
 "Building": [
 
-{ name: "Box of Nails", price: 7000, bulkOptions: [1, 5, 10, 20] },
+{ name: "Box of Nails", price: 7000, bulkOptions: [1, 5] },
 
-{ name: "Sharpening Stones", price: 500, bulkOptions: [1, 5, 10, 20] },
+{ name: "Sharpening Stones", price: 500, bulkOptions: [1, 5, 10] },
 
 { name: "4Dial Combo Lock", price: 3500, bulkOptions: [1, 5, 10] },
+
+{ name: "3Dial Combo Lock", price: 1750, bulkOptions: [1, 5, 10] },
 
 { name: "Hammer", price: 300 },
 
@@ -1200,7 +1218,7 @@ const buyitems = {
 
 { name: "Pickaxe", price: 400 },
 
-{ name: "Field Shovel", price: 0 },
+{ name: "Field Shovel", price: 400 },
 
 { name: "Crowbar", price: 300 },
 
@@ -1221,8 +1239,6 @@ const buyitems = {
 "Vehicles": {
 
 "Repair": [
-
-{ name: "Jerry Can", price: 200 },
 
 { name: "Blowtorch", price: 400 },
 
@@ -1265,9 +1281,10 @@ const buyitems = {
 // --- SELL ITEMS ---
 const sellitems = {
   Sets: [
-    { name: "Teddy Bears (4/4)", price: 500, bulkOptions: [1] },
-    { name: "Payday Masks (4/4)", price: 2500, bulkOptions: [1] },
-    { name: "Sneakers (5/5)", price: 1000, bulkOptions: [1] }
+    { name: "Teddy Bears (4/4)", price: 500, bulkOptions: [1, 5, 10] },
+    { name: "Payday Masks (4/4)", price: 2500, bulkOptions: [1, 5, 10] },
+    { name: "Fish (5/5)", price: 1000, bulkOptions: [1, 5, 10] },
+    { name: "Sneakers (5/5)", price: 1000, bulkOptions: [1, 5, 10] }
   ],
   Pelts: {
     Wild: [
@@ -1403,7 +1420,7 @@ const roles = {
   "Master Baiter": {
     description: "Turn in 25 Mackerel & 25 Carp or 25 Pollock & 25 Trout. Get $15K and the role.",
     bonuses: {
-      "Fish Bonus": 15000  
+      "Fish (5/5)": 1500
     }
   },
   "Trap God": {
@@ -1565,7 +1582,6 @@ const roles = {
 };
 
 const roleBonuses = {
-  "Master Baiter": 15000,
   "Pit Boss": 10000,
   "Cap Collector": 3500,
   "Boom Daddy": 100000,
@@ -1589,6 +1605,7 @@ const itemsWithRoleTurnIn = new Set([
   "Cow Pelt",
   "Sheep Pelt",
   "Teddy Bears (4/4)",
+  "Fish (5/5)",
   "Sneakers (5/5)",
   "Mackerel",    
   "Carp",        
@@ -1831,6 +1848,13 @@ function handleRoleTurnIn(item, summaryDiv) {
       addItemToSummary(item.name, 4, item.price, summaryDiv);
       break;
 
+    case "Fish (5/5)":
+     // Example: Turn in Mackerel + Carp
+     addItemToSummary("Mackerel / Pollock", 25, 0, summaryDiv);
+     addItemToSummary("Carp / Trout", 25, 0, summaryDiv);
+     addItemToSummary("Master Baiter Reward", 1, 15000, summaryDiv);
+     break;
+
     case "Books":
       // Book of ProfitZ: Sell 300 books & 1 bible at once
       addItemToSummary(item.name, 300, 100, summaryDiv);
@@ -2059,7 +2083,7 @@ function clearAllTransactions() {
     .forEach((div) => (div.innerHTML = ""));
   
   updateSummaries();
-  applyRoleBonuses(); // ← Add this line
+  applyRoleBonuses(); 
 }
 
 function clearRoles() {
@@ -2068,7 +2092,7 @@ function clearRoles() {
     .forEach((button) => button.classList.remove("active"));
 
   updateRoleEffects();
-  applyRoleBonuses(); // ← Add this line
+  applyRoleBonuses(); 
 }
 
 function calculateAndShowTotals() {
@@ -2127,26 +2151,15 @@ if (hasRole("First Bloodz")) {
 
   let discountedBuy = totalBuy * discount;
 
-  // Role flat currency bonuses
-  const roleBonuses = {
-    "Master Baiter": 15000,
-    "Cap Collector": 3500,
-    "Pit Boss": 10000,
-    "Bear Broker": 2500,
-    "Sneaker Head": 2500,
-    "Boom Daddy": 100000,
-    // Add more if needed
-  };
-
   let bonusTotal = 0;
   document.querySelectorAll(".role-btn.active").forEach((btn) => {
-    const role = btn.dataset.role;
-    if (roleBonuses[role]) {
-      bonusTotal += roleBonuses[role];
-    }
-  });
+  const role = btn.dataset.role;
+  if (roleBonuses.hasOwnProperty(role)) {
+    bonusTotal += roleBonuses[role];
+   }
+ });
 
-  let finalTotal = discountedBuy + bonusTotal;
+  let finalTotal = discountedBuy + totalSell + bonusTotal;
 
   // Final message in the new order
   let message = `🧾 Buy Summary:\n${buyDetails || "(No items)"}\n` +
